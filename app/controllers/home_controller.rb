@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def top
-    @post=Post.all.order(created_at: :desc)
+    @post=Post.order(created_at: :desc).limit(10)
   end
 
 
@@ -76,8 +76,8 @@ class HomeController < ApplicationController
 
   def page
     @page=params[:id].to_i
-    number_from=(@page-1)*10+1
-    number_to=number_from+9
+    number_to=Post.count-10*(@page-1)
+    number_from=number_to-9
 
     @post=Post.where(id:number_from..number_to).order(created_at: :desc)
   end
