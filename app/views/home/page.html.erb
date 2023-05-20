@@ -1,0 +1,27 @@
+<h2>page:<%= @page %></h2>
+
+
+
+<div class="index">
+    
+    <% @post.each do |post| %>
+        <div class="post">
+            <div class="post_number">number:<%= post.id %></div>
+            <div class="post_name">name:<%= post.name %></div>
+            <div class="post_date">date:<%= post.created_at.strftime('%Y/%m/%d') %></div>
+            <div class="post_content"><%= simple_format(post.content) %></div>
+            <div class="edit_and_delete">
+                <%= link_to("edit","#{post.id}/edit") %>
+                 / 
+                <%= link_to("delete","#{post.id}/delete") %>
+            </div>
+        </div>
+    <% end %>
+
+</div>
+
+<div class="navi">
+    <%= link_to("prev","/page/#{@page-1}") %>
+    / 
+    <%= link_to("next","/page/#{@page+1}") %>
+</div>

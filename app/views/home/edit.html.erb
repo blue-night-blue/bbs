@@ -1,0 +1,31 @@
+<h2>edit</h2>
+
+<% if @error_message %>
+    <div class="error_message">
+        <%= @error_message %>
+    </div> 
+<% end %>
+
+<%= form_tag("/#{@post.id}/update")  do %>
+    <div class="submit">
+        <p>
+            name
+            <input class="name" name="name" type="text" value="<%= @post.name %>">
+        </p>
+
+        <p>
+            comment
+            <textarea class="content" name="content"><%= @post.content %></textarea>
+        </p>
+
+        <p>
+            password
+            <input class="password" name="password" type="password">
+        </p>
+
+        <p><input class="submit_button" type="submit" value="edit"></p>
+    </div>
+<% end %>
+
+
+

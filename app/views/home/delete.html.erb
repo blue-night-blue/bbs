@@ -1,0 +1,27 @@
+<h2>delete</h2>
+
+<% if @error_message %>
+    <div class="error_message">
+        <%= @error_message %>
+    </div>
+<% end %>
+
+<div class="post">
+    <div class="post_name">name:<%= @post.name %></div>
+    <div class="post_date">date:<%= @post.created_at.strftime('%Y/%m/%d') %></div>
+    <div class="post_content"><%= simple_format(@post.content) %></div>
+</div>
+
+<%= form_tag("/#{@post.id}/destroy")  do %>
+    <div class="submit">
+        <p>
+            password
+            <input class="password" name="password" type="password">
+        </p>
+
+        <p><input class="submit_button" type="submit" value="delete"></p>
+    </div>
+<% end %>
+
+
+

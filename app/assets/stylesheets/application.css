@@ -1,0 +1,108 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+ @import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+ 
+
+/* all */
+
+body{
+    background-color: #099;
+    color:#fff;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    width:300px;
+}
+
+a:link,
+a:visited{
+    color:#fff;
+}
+
+
+
+
+/* form */
+
+.submit{
+    margin-bottom:5em;
+}
+
+input,textarea{
+    border:none;
+    display: block;
+}
+
+textarea{
+    height:300px;
+}
+
+.submit_button{
+    background-color: #099;
+    border:#fff solid 1px;
+    color:#fff;
+}
+
+.flash {
+    color: #000;
+    background:#fff;
+    position: absolute;
+    top: 0px;
+    border-radius: 0 0 2px 2px;
+  }
+
+
+
+
+
+
+/* top */
+ol{
+    padding-left: 1em;
+}
+
+li{
+    margin-bottom:1em;
+}
+
+.name,
+.content,
+.password{
+    width:100%;
+}
+
+.index{
+    margin-bottom:5em;
+}
+
+.post{
+    width:300px;
+    border-bottom:solid 1px #fff;
+}
+
+.post_name,
+.post_date{
+    margin:0;
+    padding:0;
+}
+
+.post_content{
+    margin:1em 0;
+}
+
+.edit_and_delete{
+    text-align: right;
+}
