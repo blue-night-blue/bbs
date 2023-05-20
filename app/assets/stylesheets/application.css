@@ -20,16 +20,21 @@
 
 /* all */
 
+:root {
+    --main-bg-color: #660;
+    --main-text-color: #fff;
+  }
+
 body{
-    background-color: #660;
-    color:#fff;
+    background-color: var(--main-bg-color);
+    color:var(--main-text-color);
     font-family: 'M PLUS Rounded 1c', sans-serif;
     width:300px;
 }
 
 a:link,
 a:visited{
-    color:#fff;
+    color:var(--main-text-color);
 }
 
 
@@ -51,16 +56,16 @@ textarea{
 }
 
 .submit_button{
-    background-color: #099;
-    border:#fff solid 1px;
-    color:#fff;
+    background-color: var(--main-bg-color);
+    border:var(--main-text-color) solid 1px;
+    color:var(--main-text-color);
 }
 
 .flash {
-    color: #000;
-    background:#fff;
+    color: var(--main-bg-color);
+    background:var(--main-text-color);
     position: absolute;
-    top: 0px;
+    top: 2px;
     border-radius: 0 0 2px 2px;
   }
 
@@ -90,7 +95,7 @@ li{
 
 .post{
     width:300px;
-    border-bottom:solid 1px #fff;
+    border-bottom:solid 1px var(--main-text-color);
 }
 
 .post_name,
