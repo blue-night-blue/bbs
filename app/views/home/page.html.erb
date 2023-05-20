@@ -11,9 +11,9 @@
             <div class="post_date">date:<%= post.created_at.strftime('%Y/%m/%d') %></div>
             <div class="post_content"><%= simple_format(post.content) %></div>
             <div class="edit_and_delete">
-                <%= link_to("edit","#{post.id}/edit") %>
+                <%= link_to("edit",controller: "home", action: "edit", id: post.id) %>
                  / 
-                <%= link_to("delete","#{post.id}/delete") %>
+                <%= link_to("delete",controller: "home", action: "delete", id: post.id) %>
             </div>
         </div>
     <% end %>
@@ -21,7 +21,14 @@
 </div>
 
 <div class="navi">
-    <%= link_to("prev","/page/#{@page-1}") %>
-    / 
-    <%= link_to("next","/page/#{@page+1}") %>
+    <% if @page==2 %>
+        <%= link_to("prev","../") %>
+    <% else %>
+        <%= link_to("prev","/page/#{@page-1}") %>
+    <% end %>
+
+    <% if @page*10<Post.count %>
+        / <%= link_to("next","/page/#{@page+1}") %>
+    <% end %>
+    
 </div>

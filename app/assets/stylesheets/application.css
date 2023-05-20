@@ -21,8 +21,8 @@
 /* all */
 
 :root {
-    --main-bg-color: #660;
-    --main-text-color: #fff;
+    --main-bg-color: #800;
+    --main-text-color: #ccc;
   }
 
 body{
@@ -37,6 +37,10 @@ a:visited{
     color:var(--main-text-color);
 }
 
+h1{
+    margin-top: 50px;
+}
+
 
 
 
@@ -47,8 +51,11 @@ a:visited{
 }
 
 input,textarea{
-    border:none;
     display: block;
+    background-color: var(--main-bg-color);
+    border:var(--main-text-color) solid 1px;
+    color:var(--main-text-color);
+    border-radius: 5px;
 }
 
 textarea{
@@ -56,17 +63,19 @@ textarea{
 }
 
 .submit_button{
-    background-color: var(--main-bg-color);
-    border:var(--main-text-color) solid 1px;
-    color:var(--main-text-color);
+    padding: 10px 30px;
+    font-size: 20px;
 }
 
 .flash {
     color: var(--main-bg-color);
     background:var(--main-text-color);
     position: absolute;
-    top: 2px;
-    border-radius: 0 0 2px 2px;
+    top: 5px;
+    padding: 5px;
+    width:300px;
+    text-align: center;
+    border-radius: 5px;
   }
 
 
@@ -111,3 +120,5 @@ li{
 .edit_and_delete{
     text-align: right;
 }
+
+

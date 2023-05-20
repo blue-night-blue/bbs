@@ -1,7 +1,10 @@
 class HomeController < ApplicationController
 
   def top
-    @post=Post.order(created_at: :desc).limit(10)
+    number_to=Post.count
+    number_from=number_to-9
+
+    @post=Post.where(id:number_from..number_to).order(created_at: :desc)
   end
 
 
