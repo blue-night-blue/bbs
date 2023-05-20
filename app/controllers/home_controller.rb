@@ -19,7 +19,7 @@ class HomeController < ApplicationController
     end
 
     if params[:password] ==""
-      @post.password = "asheifjrewrjewajrawehfwehurhu4"
+      @post.password = "uganda"
     end
     
     @post.save
