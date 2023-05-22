@@ -27,7 +27,7 @@
         <%= link_to("prev","/page/#{@page-1}") %>
     <% end %>
 
-    <% if @page*10<Post.count %>
+    <% if @page*10<Post2.count %>
         / <%= link_to("next","/page/#{@page+1}") %>
     <% end %>
     
