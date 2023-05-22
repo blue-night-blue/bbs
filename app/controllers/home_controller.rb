@@ -1,17 +1,17 @@
 class HomeController < ApplicationController
 
   def top
-    number_to=Post.count
+    number_to=Post2.count
     number_from=number_to-9
 
-    @post=Post.where(id:number_from..number_to).order(created_at: :desc)
+    @post=Post2.where(id:number_from..number_to).order(created_at: :desc)
   end
 
 
 
 
   def create
-    @post=Post.new(
+    @post=Post2.new(
       name:params[:name],
       content:params[:content],
       password:params[:password]
@@ -34,11 +34,11 @@ class HomeController < ApplicationController
 
 
   def edit
-    @post=Post.find_by(id: params[:id])
+    @post=Post2.find_by(id: params[:id])
   end
 
   def update
-    @post=Post.find_by(id: params[:id])
+    @post=Post2.find_by(id: params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
 
@@ -57,11 +57,11 @@ class HomeController < ApplicationController
 
 
   def delete
-    @post=Post.find_by(id: params[:id])
+    @post=Post2.find_by(id: params[:id])
   end
 
   def destroy
-    @post=Post.find_by(id: params[:id])
+    @post=Post2.find_by(id: params[:id])
 
     if @post.authenticate(params[:password])
       @post.destroy
@@ -79,10 +79,10 @@ class HomeController < ApplicationController
 
   def page
     @page=params[:id].to_i
-    number_to=Post.count-10*(@page-1)
+    number_to=Post2.count-10*(@page-1)
     number_from=number_to-9
 
-    @post=Post.where(id:number_from..number_to).order(created_at: :desc)
+    @post=Post2.where(id:number_from..number_to).order(created_at: :desc)
   end
 
 
