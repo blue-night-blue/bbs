@@ -86,22 +86,7 @@ class HomeController < ApplicationController
   end
 
 
-  def times_post
-    @times=params[:times].to_i
 
-    for i in 1..@times
-      Post2.create(
-        name:"連投砲",
-        content:"連投その#{i}",
-        password:"rentou"
-        )
-    end
-    
-    flash[:notice]="#{@times}連投しました"
-    redirect_to ("/")
-    
-  end
-  
 
 
 

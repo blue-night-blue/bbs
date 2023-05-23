@@ -36,6 +36,16 @@
     </div>
 <% end %>
 
+<%= form_tag({ :controller => 'home', :action => 'times_post' },{ :method => :post}) do %>
+    <div class="submit_times">
+        <input class="times" name="times" type="text" value="">
+        <input class="submit_button_times" type="submit" value="post">
+    </div>
+<% end %>
+
+
+
+
 <h2>page:1</h2>
 
 <div class="index">

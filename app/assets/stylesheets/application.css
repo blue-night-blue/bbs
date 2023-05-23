@@ -46,7 +46,7 @@ h1{
 
 /* form */
 
-.submit{
+.submit_times{
     margin-bottom:5em;
 }
 
@@ -56,6 +56,11 @@ input,textarea{
     border:var(--main-text-color) solid 1px;
     color:var(--main-text-color);
     border-radius: 5px;
+}
+
+.submit_times input{
+    border:none;
+    color:var(--main-bg-color);
 }
 
 textarea{
