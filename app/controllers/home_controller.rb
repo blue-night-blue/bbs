@@ -1,10 +1,18 @@
 class HomeController < ApplicationController
 
   def top
-    number_to=Post2.last.id
-    number_from=number_to-9
 
-    @post=Post2.where(id:number_from..number_to).order(created_at: :desc)
+    if Post2.count>0
+      recent_number=Post2.last.id
+      number_from=recent_number-9
+
+      @post=Post2.where(id:number_from..recent_number).order(created_at: :desc)
+    
+      @pages=(recent_number.to_f/10).ceil
+    else
+      @post=Post2.all
+    end
+
   end
 
 
@@ -83,6 +91,9 @@ class HomeController < ApplicationController
     number_from=number_to-9
 
     @post=Post2.where(id:number_from..number_to).order(created_at: :desc)
+
+    recent_number=Post2.last.id
+    @pages=(recent_number.to_f/10).ceil
   end
 
 

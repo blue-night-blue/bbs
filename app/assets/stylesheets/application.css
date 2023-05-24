@@ -58,19 +58,6 @@ input,textarea{
     border-radius: 5px;
 }
 
-.times{
-    border:none;
-}
-
-.submit_button_times{
-    border:none;
-    color:var(--main-bg-color);
-}
-
-textarea{
-    height:300px;
-}
-
 .submit_button{
     padding: 10px 30px;
     font-size: 20px;
@@ -107,9 +94,6 @@ li{
     width:100%;
 }
 
-.index{
-    margin-bottom:5em;
-}
 
 .post{
     width:300px;
@@ -130,4 +114,31 @@ li{
     text-align: right;
 }
 
+.times{
+    border:none;
+}
+
+.submit_button_times{
+    border:none;
+    color:var(--main-bg-color);
+}
+
+textarea{
+    height:300px;
+}
+
+
+
+
+
+/* top,page */
+.index{
+    margin-bottom:5em;
+}
+
+.navi2 a,
+.navi2 span{
+    display: inline-block;
+    margin-right: 1em;
+}
 

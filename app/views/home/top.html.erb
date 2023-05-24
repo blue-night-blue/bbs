@@ -66,8 +66,23 @@
 
 </div>
 
-<div class="navi">
-    <% if Post2.last.id>10 %>
-        <%= link_to("next","/page/2") %>
-    <% end %>
-</div>
+<% if Post2.count>0 %>
+
+    <div class="navi">
+        <% if Post2.last.id>10 %>
+            <%= link_to("next","/page/2") %>
+        <% end %>
+    </div>
+
+    <div class="navi2">
+        <span>1</span>
+
+        <% if @pages>=2 %>
+            <% for i2 in 2..@pages %>
+                <%= link_to("#{i2}","/page/#{i2}") %>
+            <% end %> 
+        <% end %>
+
+    </div>
+
+<% end %>
