@@ -12,7 +12,7 @@
     <div class="post_content"><%= simple_format(@post.content) %></div>
 </div>
 
-<%= form_tag("/#{@post.post_id}/destroy")  do %>
+<%= form_tag("/#{@post.id}/destroy")  do %>
     <div class="submit">
         <p>
             password

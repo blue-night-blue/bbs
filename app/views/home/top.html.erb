@@ -57,9 +57,9 @@
             <div class="post_date">date:<%= post.created_at.strftime('%Y/%m/%d') %></div>
             <div class="post_content"><%= simple_format(post.content) %></div>
             <div class="edit_and_delete">
-                <%= link_to("edit",controller: "home", action: "edit", id: post.post_id) %>
+                <%= link_to("edit",controller: "home", action: "edit", id: post.id) %>
                  / 
-                <%= link_to("delete",controller: "home", action: "delete", id: post.post_id) %>
+                <%= link_to("delete",controller: "home", action: "delete", id: post.id) %>
             </div>
         </div>
     <% end %>

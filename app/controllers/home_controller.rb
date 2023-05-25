@@ -49,11 +49,11 @@ class HomeController < ApplicationController
 
 
   def edit
-    @post=Post2.find_by(post_id: params[:id])
+    @post=Post2.find_by(id: params[:id])
   end
 
   def update
-    @post=Post2.find_by(post_id: params[:id])
+    @post=Post2.find_by(id: params[:id])
     @post.name = params[:name]
     @post.content = params[:content]
 
@@ -72,11 +72,11 @@ class HomeController < ApplicationController
 
 
   def delete
-    @post=Post2.find_by(post_id: params[:id])
+    @post=Post2.find_by(id: params[:id])
   end
 
   def destroy
-    @post=Post2.find_by(post_id: params[:id])
+    @post=Post2.find_by(id: params[:id])
 
     if @post.authenticate(params[:password])
       @post.destroy
