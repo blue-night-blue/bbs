@@ -119,7 +119,7 @@ class HomeController < ApplicationController
     for i in 1..@times
       Post2.create(
         name:"連投砲",
-        content:"連投その#{i}",
+        content:"連投その#{i}（全#{@times}）",
         password:"rentou",
         post_id:get_post_id
       )
