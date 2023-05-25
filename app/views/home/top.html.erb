@@ -52,14 +52,14 @@
     
     <% @post.each do |post| %>
         <div class="post">
-            <div class="post_number">number:<%= post.id %></div>
+            <div class="post_number">number:<%= post.post_id %></div>
             <div class="post_name">name:<%= post.name %></div>
             <div class="post_date">date:<%= post.created_at.strftime('%Y/%m/%d') %></div>
             <div class="post_content"><%= simple_format(post.content) %></div>
             <div class="edit_and_delete">
-                <%= link_to("edit",controller: "home", action: "edit", id: post.id) %>
+                <%= link_to("edit",controller: "home", action: "edit", id: post.post_id) %>
                  / 
-                <%= link_to("delete",controller: "home", action: "delete", id: post.id) %>
+                <%= link_to("delete",controller: "home", action: "delete", id: post.post_id) %>
             </div>
         </div>
     <% end %>
@@ -69,7 +69,7 @@
 <% if Post2.count>0 %>
 
     <div class="navi">
-        <% if Post2.last.id>10 %>
+        <% if Post2.last.post_id>10 %>
             <%= link_to("next","/page/2") %>
         <% end %>
     </div>
