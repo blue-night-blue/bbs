@@ -1,24 +1,8 @@
-# README
+#何これ
+シンプルな掲示板システム
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+#機能
+-文章だけ投稿できる
+-投稿時、パスワードを設定しておくと後から編集や削除ができる
+-パスワードはbcryptを使って暗号化
+-ページネーションを無理やり実装（ライブラリとかがあるなんて知らんかったし）
