@@ -10,6 +10,6 @@ COPY Gemfile Gemfile.lock ./
 RUN bundle
 COPY . .
 
-ENTRYPOINT ["bash", "/app/entrypoint.sh"]
+ENTRYPOINT ["bash", "/bbs/entrypoint.sh"]
 
 CMD ["rails", "s", "-b", "0.0.0.0"]
